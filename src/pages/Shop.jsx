@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import PRODUCTS from "../data/products";
 import ProductCard from "../components/ProductCard";

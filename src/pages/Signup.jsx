@@ -26,24 +26,27 @@ function Signup() {
     }
 
     signUp(form);
-    navigate("/account"); // redirect to profile/account page after signup
+    navigate("/account");
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-6 py-12">
-      <div className="w-full max-w-md bg-white shadow-md rounded-lg p-8">
-        <h1 className="text-2xl font-bold text-center mb-6">Create Account</h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-amber-900 px-6 py-12">
+      <div className="w-full max-w-md bg-black/80 shadow-2xl rounded-2xl p-8 border border-amber-600/30 backdrop-blur-md">
+        <h1 className="text-3xl font-bold text-center mb-6 text-amber-500 tracking-wide">
+          Create Your Account
+        </h1>
+
+        <form onSubmit={handleSubmit} className="space-y-5">
           {/* Title */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-amber-300 mb-1">
               Title
             </label>
             <select
               name="title"
               value={form.title}
               onChange={handleChange}
-              className="w-full mt-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="w-full border border-amber-500/40 bg-transparent text-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
               required
             >
               <option value="">Select Title</option>
@@ -56,7 +59,7 @@ function Signup() {
 
           {/* First Name */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-amber-300 mb-1">
               First Name
             </label>
             <input
@@ -65,14 +68,14 @@ function Signup() {
               value={form.firstName}
               onChange={handleChange}
               placeholder="Enter your first name"
-              className="w-full mt-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="w-full border border-amber-500/40 bg-transparent text-white rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
               required
             />
           </div>
 
           {/* Last Name */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-amber-300 mb-1">
               Last Name
             </label>
             <input
@@ -81,14 +84,14 @@ function Signup() {
               value={form.lastName}
               onChange={handleChange}
               placeholder="Enter your last name"
-              className="w-full mt-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="w-full border border-amber-500/40 bg-transparent text-white rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
               required
             />
           </div>
 
-          {/* Phone Number */}
+          {/* Phone */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-amber-300 mb-1">
               Phone Number
             </label>
             <input
@@ -97,25 +100,25 @@ function Signup() {
               value={form.phone}
               onChange={handleChange}
               placeholder="Enter your phone number"
-              className="w-full mt-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="w-full border border-amber-500/40 bg-transparent text-white rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
               required
             />
           </div>
 
-          {/* Submit */}
+          {/* Button */}
           <button
             type="submit"
-            className="w-full bg-amber-600 text-white py-2 rounded-lg hover:bg-amber-700 transition"
+            className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold tracking-wide transition-all shadow-md hover:shadow-amber-600/50"
           >
             Sign Up
           </button>
         </form>
 
-        <p className="text-center text-sm text-gray-600 mt-4">
+        <p className="text-center text-sm text-gray-300 mt-5">
           Already have an account?{" "}
           <a
             href="/login"
-            className="text-amber-600 font-medium hover:underline"
+            className="text-amber-400 font-semibold hover:underline"
           >
             Sign In
           </a>
